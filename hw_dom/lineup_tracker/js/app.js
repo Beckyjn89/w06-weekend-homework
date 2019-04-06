@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Form submitted');
 
     // getting info from form
-    const newSkaterName = document.createElement('h3');
+    const newSkaterName = document.createElement('p');
     newSkaterName.textContent =  evt.target.skater_name.value;
 
     const newSkaterNum = document.createElement('h2');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newSkaterClass = evt.target.position.value;
 
 
-    const newSkaterPosition = document.createElement('h4');
+    const newSkaterPosition = document.createElement('p');
     newSkaterPosition.textContent = newSkaterClass;
 
     const newSkaterTeam = evt.target.team.value;
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     newSkater.classList.add(newSkaterClass);
     newSkater.appendChild(newSkaterNum);
     newSkater.appendChild(newSkaterName);
-    newSkater.appendChild(newSkaterPosition);
 
 
     if (newSkaterTeam === 'team1'){
@@ -56,10 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('all skaters deleted');
 
     const team1List = document.querySelector('ul.team1');
-    team1List.innerHTML = "";
+    team1List.innerHTML = "<h2>team one</h2>";
+    ;
 
     const team2List = document.querySelector('ul.team2');
-    team2List.innerHTML = "";
+    team2List.innerHTML = "<h2>team two</h2>";
   };
 
   deleteAll.addEventListener('click', handleDeleteAll);
