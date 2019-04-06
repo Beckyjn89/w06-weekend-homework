@@ -55,8 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleDeleteAll = function(evt){
     console.log('all skaters deleted');
 
-    const skaterList = document.querySelector('ul');
-    skaterList.innerHTML = "";
+    const team1List = document.querySelector('ul.team1');
+    team1List.innerHTML = "";
+
+    const team2List = document.querySelector('ul.team2');
+    team2List.innerHTML = "";
   };
 
   deleteAll.addEventListener('click', handleDeleteAll);
